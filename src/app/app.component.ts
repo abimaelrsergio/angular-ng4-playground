@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   <p>Como vai a vida?</p>
 
   <ul>
-  	<li *ngIf="myArr == 'Alguma coisa'">Sim, eu existo</li>
+  	<li *ngIf="myArr != 'Alguma coisa'">Sim, eu existo</li>
   </ul>
 
   `,
@@ -15,5 +15,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  myArr = "Alguma coisa";
+  myArr = "Alguma coisa diferente";
 }
