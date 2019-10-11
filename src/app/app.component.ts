@@ -6,16 +6,15 @@ import { Component } from '@angular/core';
   <h1>Salve amigos, como estão?</h1>
   <p>Como vai a vida?</p>
 
-  <ul>
-  	<li *ngIf="myArr; else outroTemplate">Sim, eu existo</li>
-  </ul>
+  <div *ngIf="myArr; then template1 else template2"></div>
 
-  <ng-template #outroTemplate>Não, eu não</ng-template>
+  <ng-template #template1>Verdadeiro</ng-template>
+  <ng-template #template2>Falso</ng-template>
 
   `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   
-  myArr = "Alguma coisa diferente";
+  myArr = true;
 }
