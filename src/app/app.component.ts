@@ -5,13 +5,13 @@ import { Component } from '@angular/core';
   template: `
   <h1>Salve amigos, como estão?</h1>
 
-  <button [disabled]="buttonStatus">My Buton</button>
+  <button [disabled]="buttonStatus == 'enabled'">My Buton</button>
 
   `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   
-  buttonStatus = true;
+  buttonStatus = 'enabled';
 
 }
