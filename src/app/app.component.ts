@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   <p>Como vai a vida?</p>
 
   <ul>
-  	<li *ngIf="Alguma coisa">Sim, eu existo</li>
+  	<li *ngIf="myArr == 'Alguma coisa'">Sim, eu existo</li>
   </ul>
 
   `,
