@@ -5,15 +5,13 @@ import { Component } from '@angular/core';
   template: `
   <h1>Salve amigos, como estão?</h1>
   <p>Como vai a vida?</p>
-  <p>{{ myObject.local }}</p>
+  <ul>
+  	<li *ngFor="let arr of myArr">{{ arr }}</li>
+  </ul>
   `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   
-  myObject = {
-  	sexo: 'homem',
-  	idade: 42,
-  	local: 'Brazil'
-  }
+  myArr = ['dele','dela','seus'];
 }
