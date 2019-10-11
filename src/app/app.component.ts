@@ -5,13 +5,17 @@ import { Component } from '@angular/core';
   template: `
   <h1>Salve amigos, como estão?</h1>
 
-  <button [disabled]="buttonStatus == 'enabled'">My Buton</button>
+  <button (click)="myEvent($event)">Meu botão</button>
+  <BR />
+  <button (mouseenter)="myEvent($event)">Meu segundo botão</button>
 
   `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   
-  buttonStatus = 'enabled';
-
+  myEvent(){
+  	console.log(event);
+  }
+  
 }
