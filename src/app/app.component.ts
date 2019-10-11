@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
   <p>Como vai a vida?</p>
 
   <ul>
-  	<li *ngIf="myArr != 'Alguma coisa'">Sim, eu existo</li>
+  	<li *ngIf="myArr; else outroTemplate">Sim, eu existo</li>
   </ul>
+
+  <ng-template #outroTemplate>Não, eu não</ng-template>
 
   `,
   styleUrls: ['./app.component.css']
