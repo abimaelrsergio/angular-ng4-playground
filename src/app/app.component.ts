@@ -5,12 +5,9 @@ import { Component } from '@angular/core';
   template: `
   <h1>Salve amigos, como estão?</h1>
   <p>Como vai a vida?</p>
-  <ul>
-  	<li *ngIf="myArr">Sim, eu existo</li>
-  </ul>
 
   <ul>
-  	<li *ngIf="!myArr">Sim, eu existo</li>
+  	<li *ngIf="Alguma coisa">Sim, eu existo</li>
   </ul>
 
   `,
@@ -18,5 +15,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  myArr = ['dele','dela','seus'];
+  myArr = "Alguma coisa";
 }
