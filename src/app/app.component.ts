@@ -5,15 +5,13 @@ import { Component } from '@angular/core';
   template: `
   <h1>Salve amigos, como estão?</h1>
 
-  <img src="{{ angularLogo }}">
-  <img [src]="angularLogo">
-  <img bind-src="angularLogo">
+  <button [disabled]="buttonStatus">My Buton</button>
 
   `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   
-  angularLogo='https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg';
+  buttonStatus = true;
 
 }
