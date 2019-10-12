@@ -36,3 +36,14 @@ https://developer.mozilla.org/en-US/docs/Web/Events
 
 ## Animation
 npm install @angular/animations@latest --save
+
+## Deploying the app
+ng build
+ng build --prod
+
+## Deploy on angular 2
+ng buld
+ng build --prod --aot
+
+## Deploy the app: /whatever é o caminho para o raiz do servidor onde será hospedado os arquivos.
+ng build --prod --base-href /whatever
