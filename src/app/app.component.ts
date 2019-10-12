@@ -4,19 +4,22 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
 
-  	<h1>Olá</h1>
+  	<h1 [class]="titleClass">Olá</h1>
 
   `,
   styles: [`
   	h1 {
   		text-decoration:underline;
   	}
+
+  	.red-title {
+  		color:red;
+  	}
+
   `]
 })
 export class AppComponent {
   
-  myEvent(){
-  
-  }
+  titleClass = 'red-title'
   
 }
