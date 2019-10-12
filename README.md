@@ -47,3 +47,8 @@ ng build --prod --aot
 
 ## Deploy the app: /whatever é o caminho para o raiz do servidor onde será hospedado os arquivos.
 ng build --prod --base-href /whatever
+
+## Instalando facilitador para fazer deploy no github
+npm i -g angular-cli-ghpages
+ng build --prod --base-href https://abimaelrsergio.github.io/angular-ng4-playground/
+ngh
