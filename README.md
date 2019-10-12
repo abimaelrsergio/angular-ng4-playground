@@ -30,3 +30,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Mozilla Developer network:
 https://developer.mozilla.org/en-US/docs/Web/Events
+
+## Criando serviço
+ ng g service data
