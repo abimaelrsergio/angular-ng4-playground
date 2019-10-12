@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
 
-  	<h1 [class]="titleClass">Olá</h1>
+  	<h1 [class.red-title]="titleClass">Olá</h1>
 
   `,
   styles: [`
@@ -20,6 +20,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  titleClass = 'red-title'
+  titleClass = false
   
 }
