@@ -3,19 +3,20 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <h1>Salve amigos, como estão?</h1>
 
-  <button (click)="myEvent($event)">Meu botão</button>
-  <BR />
-  <button (mouseenter)="myEvent($event)">Meu segundo botão</button>
+  	<h1>Olá</h1>
 
   `,
-  styleUrls: ['./app.component.css']
+  styles: [`
+  	h1 {
+  		text-decoration:underline;
+  	}
+  `]
 })
 export class AppComponent {
   
   myEvent(){
-  	console.log(event);
+  
   }
   
 }
