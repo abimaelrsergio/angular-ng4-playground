@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
 
-  	<h1 [style.color]="titleStyle ?  'green' : 'pink'">Olá</h1>
+  	<h1 [ngStyle]="titleStyles">Olá</h1>
 
   `,
   styles: [`
@@ -23,6 +23,9 @@ import { Component } from '@angular/core';
   `]
 })
 export class AppComponent {
-  
-  titleStyle = false;
+
+  titleStyles = {
+  	'color': 'red',
+  	'font-size' : '4em'
+  }
 }
