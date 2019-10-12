@@ -1,40 +1,47 @@
 import { Component } from '@angular/core';
 import { DataService } from './data.service';
+import { trigger,state,style,transition,animate,keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   template: `
-
-  	<p>{{ someProperty }}
-
+    <p [@myAwsomeAnimation]='state' (click)="animateMe()">I will animate</p>
   `,
   styles: [`
-  	h1 {
-  		text-decoration:underline;
-  	}
+    p {
+      width:200px;
+      background:lightgray;
+      margin: 100px auto;
+      text-align:center;
+      padding:20px;
+      font-size:1.5em;
+    }
+  `],
+  animations: [
+    trigger('myAwsomeAnimation', [
+      state('small', style({
+        transform: 'scale(1)',
+      })),
+      state('large', style({
+        transform: 'scale(1.2)',
+      })),
+      transition('small <=> large', animate('300ms ease-in', style({
+        transform: 'translateY(40px)'
+      }))),  
+    ]),
+  ]
 
-  	.red-title {
-  		color:red;
-  	}
-
-  	.large-title {
-  		font-size:4em;
-  	}
-
-  `]
 })
 export class AppComponent {
+
+  state: string = 'small'
 
   constructor(private dataService:DataService){
 
   }
 
-  someProperty:string = '';
-
-  ngOnInit(){
-    console.log(this.dataService.cars);
-
-    this.someProperty = this.dataService.myData();
+  animateMe(){
+    this.state = (this.state === 'small' ? 'large' : 'small');
   }
 
 }

@@ -33,3 +33,6 @@ https://developer.mozilla.org/en-US/docs/Web/Events
 
 ## Criando serviço
  ng g service data
+
+## Animation
+npm install @angular/animations@latest --save
